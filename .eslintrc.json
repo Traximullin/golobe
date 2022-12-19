@@ -36,6 +36,7 @@
         "react-hooks/exhaustive-deps": "warn",
         "import/prefer-default-export": "off",
         "max-len": ["warn", { "code": 120 }],
+        "react/require-default-props": 0,
         "linebreak-style": 0,
         "react/prop-types": "off",
         "import/extensions": [
@@ -44,6 +45,16 @@
             {
                 "ts": "never",
                 "tsx": "never"
+            }
+        ],
+        "import/no-extraneous-dependencies": [
+            "error",
+            {
+              "devDependencies": [
+                "**/*.stories.*",
+                "**/.storybook/**/*.*"
+              ],
+              "peerDependencies": true
             }
         ],
         "@typescript-eslint/explicit-function-return-type": [
